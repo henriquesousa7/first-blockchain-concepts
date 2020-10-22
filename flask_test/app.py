@@ -6,22 +6,16 @@ from blchain import Blockchain
 app = Flask(__name__)
 
 @app.route('/blchain', methods=['GET'])
-def get_chain():
-   
+def get_chain():   
   data = blchain.get_all()
-  
   return jsonify(data)
 
 
 @app.route('/createblock/<data>', methods=['GET'])
 def cresteBlock(data):
-
   try:
-
     blchain.add_block(data)
-  
   except Exception as e:
-
     return e
 
   return 'Success'
