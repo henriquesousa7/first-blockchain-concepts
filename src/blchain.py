@@ -24,7 +24,8 @@ class Blockchain:
       nonce += 1
 
     #print('Nonce: ', nonce)
-    self.blocks.append(hash)
+    final_data = {'data': data, 'time': time, 'prev_hash':prev_hash, 'hash':hash}
+    self.blocks.append(final_data)
 
   def hash_valid(self, hash):
     return hash.startswith('0000')
@@ -37,7 +38,7 @@ class Blockchain:
     prev_hash = self.get_last_blockhash()
     time = datetime.utcnow().timestamp()
     
-    self.hash_block(data, time, prev_hash, index)
+    self.hash_block(data, time, prev_hash['hash'], index)
 
   def get_all(self):
     return self.blocks
