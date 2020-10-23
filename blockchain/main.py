@@ -1,4 +1,4 @@
-from blchain import Blockchain
+from blockchain.blchain import Blockchain
 
 if __name__ == '__main__':
   

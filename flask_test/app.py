@@ -1,7 +1,5 @@
 from flask import Flask, jsonify
-import sys
-sys.path.insert(0,'../src')
-from blchain import Blockchain
+from blockchain.blchain import Blockchain
 
 app = Flask(__name__)
 
