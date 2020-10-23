@@ -1,4 +1,7 @@
-from blockchain.blchain import Blockchain
+import sys
+
+sys.path.insert(0, '../blockchain')
+from blchain import Blockchain
 
 if __name__ == '__main__':
   
