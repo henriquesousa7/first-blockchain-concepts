@@ -13,7 +13,7 @@ def get_chain():
 
 
 @app.route('/createblock/<data>', methods=['GET'])
-def cresteBlock(data):
+def createBlock(data):
   try:
     blchain.add_block(data)
   except Exception as e:
